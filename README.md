@@ -51,7 +51,7 @@ Default value is 'chrome'.
 
 
 ### Source code
-Source code (git repo) is available at ```https://github.com/tatarynov/wix.git```
+Source code (git repo) is available at ```https://github.com/tatarynov/java-web-selenide```
 
 
 ### Assumptions
@@ -76,16 +76,11 @@ git pull
 
 For MacOS platform:
 ```
-./gradlew -Dsomeparameter=value test
+gradle -Dsomeparameter=value test
 ```
 
 For Windows platform:
 ```
 gradle -Dsomeparameter=value test
 ```
-
-## Reports
-
-
-A HTML report will be generated in ```~/report``` directory.
 
