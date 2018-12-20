@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.tatarynov'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-simple:1.7.25'
+    compile group: 'com.codeborne', name: 'selenide', version: '5.1.0'
+    compile group: 'org.testng', name: 'testng', version: '6.11'
+    testCompile("org.assertj:assertj-core:3.10.0")
+    testCompile group: 'org.testng', name: 'testng', version: '6.14.3'
+}
+
+test {
+    useTestNG()
+    systemProperties = System.getProperties()
+
+
+    afterSuite { suite, result ->
+        result.exception?.printStackTrace()
+    }
+}
